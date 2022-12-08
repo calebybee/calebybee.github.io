@@ -3,11 +3,152 @@
 <head>
 </head>
 <body>
-    <json-viewer id="json">
-        { "quiz": { "sport": { "q1": { "question": "Which one is correct team name in NBA?", "options": [ "New York Bulls",
-        "Los Angeles Kings", "Golden State Warriros", "Huston Rocket" ], "answer": "Huston Rocket" } }, "maths": { "q1": {
-        "question": "5 + 7 = ?", "options": [ "10", "11", "12", "13" ], "answer": "12" }, "q2": { "question": "12 - 8 = ?",
-        "options": [ "1", "2", "3", "4" ], "answer": "4" } } } }
-    </json-viewer>
+    <json-viewer id="json"></json-viewer>
 </body>
+<script>
+    // fetch('AGREEMENT_ACTION_DELEGATED.json')
+    // .then((response) => response.json())
+    // .then((json) => document.querySelector('#json').data = json);
+    document.querySelector('#json').data = 
+    {
+        "root": {
+            "webhookId": "",
+            "webhookName": "",
+            "webhookNotificationId": "",
+            "webhookUrlInfo": {
+                "url": ""
+            },
+            "webhookScope": "",
+            "webhookNotificationApplicableUsers": [
+                {
+                    "id": "",
+                    "email": "",
+                    "role": "",
+                    "payloadApplicable": ""
+                }
+            ],
+            "event": "",
+            "subEvent": "",
+            "eventDate": "",
+            "eventResourceType": "",
+            "eventResourceParentType": "",
+            "eventResourceParentId": "",
+            "participantRole": "",
+            "actionType": "",
+            "participantUserId": "",
+            "participantUserEmail": "",
+            "actingUserId": "",
+            "actingUserEmail": "",
+            "actingUserIpAddress": "",
+            "initiatingUserId": "",
+            "initiatingUserEmail": "",
+            "agreement": {
+                "id": "",
+                "name": "",
+                "signatureType": "",
+                "status": "",
+                "ccs": [
+                    {
+                        "email": "",
+                        "label": "",
+                        "visiblePages": [
+                            ""
+                        ]
+                    }
+                ],
+                "deviceInfo": {
+                    "applicationDescription": "",
+                    "deviceDescription": "",
+                    "location": {
+                        "latitude": "",
+                        "longitude": ""
+                    },
+                    "deviceTime": ""
+                },
+                "documentVisibilityEnabled": "",
+                "createdDate": "",
+                "expirationTime": "",
+                "externalId": {
+                    "id": ""
+                },
+                "postSignOption": {
+                    "redirectDelay": "",
+                    "redirectUrl": ""
+                },
+                "firstReminderDelay": "",
+                "locale": "",
+                "message": "",
+                "reminderFrequency": "",
+                "senderEmail": "",
+                "vaultingInfo": {
+                    "enabled": ""
+                },
+                "workflowId": "",
+                "participantSetsInfo": {
+                    "participantSets": [
+                        {
+                            "memberInfos": [
+                                {
+                                    "id": "",
+                                    "email": "",
+                                    "company": "",
+                                    "name": "",
+                                    "privateMessage": "",
+                                    "status": ""
+                                }
+                            ],
+                            "order": "",
+                            "role": "",
+                            "status": "",
+                            "id": "",
+                            "name": "",
+                            "privateMessage": ""
+                        }
+                    ],
+                    "nextParticipantSets": [
+                        {
+                            "memberInfos": [
+                                {
+                                    "id": "",
+                                    "email": "",
+                                    "company": "",
+                                    "name": "",
+                                    "privateMessage": "",
+                                    "status": ""
+                                }
+                            ],
+                            "order": "",
+                            "role": "",
+                            "status": "",
+                            "id": "",
+                            "name": "",
+                            "privateMessage": ""
+                        }
+                    ]
+                },
+                "documentsInfo": {
+                    "documents": [
+                        {
+                            "id": "",
+                            "label": "",
+                            "numPages": "",
+                            "mimeType": "",
+                            "name": ""
+                        }
+                    ],
+                    "supportingDocuments": [
+                        {
+                            "displayLabel": "",
+                            "fieldName": "",
+                            "id": "",
+                            "mimeType": "",
+                            "numPages": ""
+                        }
+                    ]
+                }
+            },
+            "lastElementTest": 1
+        }
+    };
+</script>
 </html> 

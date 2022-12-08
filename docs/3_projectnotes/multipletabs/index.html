@@ -12,23 +12,23 @@
     <title>Multiple Tabs :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1670479079" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1670479079" rel="stylesheet">
-    <link href="/css/hybrid.css?1670479079" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1670479079" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1670479079" rel="stylesheet">
-    <link href="/css/auto-complete.css?1670479079" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1670479079" rel="stylesheet">
-    <link href="/css/theme.css?1670479079" rel="stylesheet">
-    <link href="/css/tabs.css?1670479079" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1670479079" rel="stylesheet">
+    <link href="/css/nucleus.css?1670480339" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1670480339" rel="stylesheet">
+    <link href="/css/hybrid.css?1670480339" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1670480339" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1670480339" rel="stylesheet">
+    <link href="/css/auto-complete.css?1670480339" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1670480339" rel="stylesheet">
+    <link href="/css/theme.css?1670480339" rel="stylesheet">
+    <link href="/css/tabs.css?1670480339" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1670480339" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1670479079" rel="stylesheet">
+    <link href="/css/theme-mine.css?1670480339" rel="stylesheet">
     
     
-    <link href="/css/jsonTree.css?1670479079" rel="stylesheet" />
-    <script src="/js/jsonTree.js?1670479079"></script>
-    <script src="/js/jquery-3.3.1.min.js?1670479079"></script>
+    <link href="/css/jsonTree.css?1670480339" rel="stylesheet" />
+    <script src="/js/jsonTree.js?1670480339"></script>
+    <script src="/js/jquery-3.3.1.min.js?1670480339"></script>
     <script src="https://unpkg.com/@alenaksu/json-viewer@2.0.0/dist/json-viewer.bundle.js"></script>
 
     <script>
@@ -75,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-search"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1670479079"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1670479079"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1670480339"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1670480339"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/calebybee.github.io";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1670479079"></script>
+<script type="text/javascript" src="/js/search.js?1670480339"></script>
 
         
       </div>
@@ -1368,19 +1368,19 @@ jack a dull boy.
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="/js/clipboard.min.js?1670479079"></script>
-<script src="/js/perfect-scrollbar.min.js?1670479079"></script>
-<script src="/js/perfect-scrollbar.jquery.min.js?1670479079"></script>
-<script src="/js/jquery.sticky.js?1670479079"></script>
-<script src="/js/featherlight.min.js?1670479079"></script>
-<script src="/js/highlight.pack.js?1670479079"></script>
+<script src="/js/clipboard.min.js?1670480340"></script>
+<script src="/js/perfect-scrollbar.min.js?1670480340"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1670480340"></script>
+<script src="/js/jquery.sticky.js?1670480340"></script>
+<script src="/js/featherlight.min.js?1670480340"></script>
+<script src="/js/highlight.pack.js?1670480340"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/js/modernizr.custom-3.6.0.js?1670479079"></script>
-<script src="/js/learn.js?1670479079"></script>
-<script src="/js/hugo-learn.js?1670479079"></script>
+<script src="/js/modernizr.custom-3.6.0.js?1670480340"></script>
+<script src="/js/learn.js?1670480340"></script>
+<script src="/js/hugo-learn.js?1670480340"></script>
 
 
-<script src="/mermaid/mermaid.js?1670479079"></script>
+<script src="/mermaid/mermaid.js?1670480340"></script>
 
 <script>
 mermaid.initialize({ startOnLoad: true });
@@ -1509,6 +1509,18 @@ function getElementTopPosition(element) {
     tree.expand(function(node) {
     return node.childNodes.length < 2 || node.label === 'phoneNumbers';
     });
+
+    const viewer = document.querySelector('#json');
+
+    
+    viewer.expand('**');
+    
+    
+
+    
+    const searchIterator = viewer.search('value');
+    
+    searchIterator.next();
 </script>
 </body>
 </html>

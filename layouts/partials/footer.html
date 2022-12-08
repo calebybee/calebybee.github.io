@@ -106,6 +106,18 @@ mermaid.initialize({ startOnLoad: true });
     tree.expand(function(node) {
     return node.childNodes.length < 2 || node.label === 'phoneNumbers';
     });
+
+    const viewer = document.querySelector('#json');
+
+    // Expand/collapse/filter
+    viewer.expand('**');
+    // viewer.collapse(/name/);
+    // viewer.filter('test.*.name');
+
+    // Search
+    const searchIterator = viewer.search('value');
+    // Scrolls to the node and highlight the value
+    searchIterator.next();
 </script>
 </body>
 </html>
