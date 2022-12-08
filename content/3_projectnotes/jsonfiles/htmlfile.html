@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <script src="jsonTree.js"></script>
+    <link href="jsonTree.css" rel="stylesheet" />
+    <script>
+        // Get DOM-element for inserting json-tree
+        var wrapper = document.getElementById('json-tree-view');
+        // Get json-data by javascript-object
+        var data = {
+            "firstName": "Jonh",
+            "lastName": "Smith",
+            "phones": [
+                "123-45-67",
+                "987-65-43"
+            ]
+        };
+
+        // or from a string by JSON.parse(str) method
+        var dataStr = '{ "firstName": "Jonh", "lastName": "Smith", "phones": ["123-45-67", "987-65-43"]}';
+        try {
+            var data = JSON.parse(dataStr);
+        } catch (e) {}
+
+        // Create json-tree
+        var tree = jsonTree.create(data, wrapper);
+
+        // Expand all (or selected) child nodes of root (optional)
+        tree.expand(function(node) {
+        return node.childNodes.length < 2 || node.label === 'phoneNumbers';
+        });
+    </script>
 </head>
 <body>
 
 <h1>Heading</h1>
-<p>This is a paragraph.</p>
-
-<iframe src="AGREEMENT_ACTION_COMPLETED.json" height="200" width="300" title="Iframe Example"></iframe> 
-
+<div id="json-tree-view">
+</div>
 </body>
 </html> 
