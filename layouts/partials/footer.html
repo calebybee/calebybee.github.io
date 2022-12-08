@@ -79,5 +79,33 @@ mermaid.initialize({ startOnLoad: true });
 </script>
 {{ end }}
 {{ partial "custom-footer.html" . }}
+
+<script>
+    // Get DOM-element for inserting json-tree
+    var wrapper = document.getElementById('json-tree-view');
+    // Get json-data by javascript-object
+    var data = {
+        "firstName": "Jonh",
+        "lastName": "Smith",
+        "phones": [
+            "123-45-67",
+            "987-65-43"
+        ]
+    };
+
+    // or from a string by JSON.parse(str) method
+    var dataStr = '{ "firstName": "Jonh", "lastName": "Smith", "phones": ["123-45-67", "987-65-43"]}';
+    try {
+        var data = JSON.parse(dataStr);
+    } catch (e) {}
+
+    // Create json-tree
+    var tree = jsonTree.create(data, wrapper);
+
+    // Expand all (or selected) child nodes of root (optional)
+    tree.expand(function(node) {
+    return node.childNodes.length < 2 || node.label === 'phoneNumbers';
+    });
+</script>
 </body>
 </html>

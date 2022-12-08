@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.100.2" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,27 @@
     <title>RST File :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1670359117" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1670359117" rel="stylesheet">
-    <link href="/css/hybrid.css?1670359117" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1670359117" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1670359117" rel="stylesheet">
-    <link href="/css/auto-complete.css?1670359117" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1670359117" rel="stylesheet">
-    <link href="/css/theme.css?1670359117" rel="stylesheet">
-    <link href="/css/tabs.css?1670359117" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1670359117" rel="stylesheet">
+    <link href="/css/nucleus.css?1670479079" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1670479079" rel="stylesheet">
+    <link href="/css/hybrid.css?1670479079" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1670479079" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1670479079" rel="stylesheet">
+    <link href="/css/auto-complete.css?1670479079" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1670479079" rel="stylesheet">
+    <link href="/css/theme.css?1670479079" rel="stylesheet">
+    <link href="/css/tabs.css?1670479079" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1670479079" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1670359117" rel="stylesheet">
+    <link href="/css/theme-mine.css?1670479079" rel="stylesheet">
     
     
+    <link href="/css/jsonTree.css?1670479079" rel="stylesheet" />
+    <script src="/js/jsonTree.js?1670479079"></script>
+    <script src="/js/jquery-3.3.1.min.js?1670479079"></script>
+    <script src="https://unpkg.com/@alenaksu/json-viewer@2.0.0/dist/json-viewer.bundle.js"></script>
 
-    <script src="/js/jquery-3.3.1.min.js?1670359117"></script>
+    <script>
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-search"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1670359117"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1670359117"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1670479079"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1670479079"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/calebybee.github.io";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1670359117"></script>
+<script type="text/javascript" src="/js/search.js?1670479079"></script>
 
         
       </div>
@@ -1163,19 +1168,19 @@ this.setDataObjectContents(&quot;MyNotes.txt&quot;, oFile);
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="/js/clipboard.min.js?1670359118"></script>
-<script src="/js/perfect-scrollbar.min.js?1670359118"></script>
-<script src="/js/perfect-scrollbar.jquery.min.js?1670359118"></script>
-<script src="/js/jquery.sticky.js?1670359118"></script>
-<script src="/js/featherlight.min.js?1670359118"></script>
-<script src="/js/highlight.pack.js?1670359118"></script>
+<script src="/js/clipboard.min.js?1670479081"></script>
+<script src="/js/perfect-scrollbar.min.js?1670479081"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1670479081"></script>
+<script src="/js/jquery.sticky.js?1670479081"></script>
+<script src="/js/featherlight.min.js?1670479081"></script>
+<script src="/js/highlight.pack.js?1670479081"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/js/modernizr.custom-3.6.0.js?1670359118"></script>
-<script src="/js/learn.js?1670359118"></script>
-<script src="/js/hugo-learn.js?1670359118"></script>
+<script src="/js/modernizr.custom-3.6.0.js?1670479081"></script>
+<script src="/js/learn.js?1670479081"></script>
+<script src="/js/hugo-learn.js?1670479081"></script>
 
 
-<script src="/mermaid/mermaid.js?1670359118"></script>
+<script src="/mermaid/mermaid.js?1670479081"></script>
 
 <script>
 mermaid.initialize({ startOnLoad: true });
@@ -1278,7 +1283,33 @@ function getElementTopPosition(element) {
 }
 </script>
 
+<script>
+    
+    var wrapper = document.getElementById('json-tree-view');
+    
+    var data = {
+        "firstName": "Jonh",
+        "lastName": "Smith",
+        "phones": [
+            "123-45-67",
+            "987-65-43"
+        ]
+    };
 
+    
+    var dataStr = '{ "firstName": "Jonh", "lastName": "Smith", "phones": ["123-45-67", "987-65-43"]}';
+    try {
+        var data = JSON.parse(dataStr);
+    } catch (e) {}
+
+    
+    var tree = jsonTree.create(data, wrapper);
+
+    
+    tree.expand(function(node) {
+    return node.childNodes.length < 2 || node.label === 'phoneNumbers';
+    });
+</script>
 </body>
 </html>
 

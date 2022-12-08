@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.100.2" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,27 @@
     <title>JSON Documentation :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1670359117" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1670359117" rel="stylesheet">
-    <link href="/css/hybrid.css?1670359117" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1670359117" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1670359117" rel="stylesheet">
-    <link href="/css/auto-complete.css?1670359117" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1670359117" rel="stylesheet">
-    <link href="/css/theme.css?1670359117" rel="stylesheet">
-    <link href="/css/tabs.css?1670359117" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1670359117" rel="stylesheet">
+    <link href="/css/nucleus.css?1670479079" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1670479079" rel="stylesheet">
+    <link href="/css/hybrid.css?1670479079" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1670479079" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1670479079" rel="stylesheet">
+    <link href="/css/auto-complete.css?1670479079" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1670479079" rel="stylesheet">
+    <link href="/css/theme.css?1670479079" rel="stylesheet">
+    <link href="/css/tabs.css?1670479079" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1670479079" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1670359117" rel="stylesheet">
+    <link href="/css/theme-mine.css?1670479079" rel="stylesheet">
     
     
+    <link href="/css/jsonTree.css?1670479079" rel="stylesheet" />
+    <script src="/js/jsonTree.js?1670479079"></script>
+    <script src="/js/jquery-3.3.1.min.js?1670479079"></script>
+    <script src="https://unpkg.com/@alenaksu/json-viewer@2.0.0/dist/json-viewer.bundle.js"></script>
 
-    <script src="/js/jquery-3.3.1.min.js?1670359117"></script>
+    <script>
+    </script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +75,14 @@
     <span data-search-clear=""><i class="fas fa-search"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1670359117"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1670359117"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1670479079"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1670479079"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/calebybee.github.io";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1670359117"></script>
+<script type="text/javascript" src="/js/search.js?1670479079"></script>
 
         
       </div>
@@ -812,7 +817,7 @@
             <h2 id="first-set">First set</h2>
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
-<div class="right right-column-content">
+<div id="right-column-content" class="right right-column-content">
     
 
 
@@ -839,6 +844,13 @@
           class="tab-nav-button btn "
           onclick="switchTab('default','Tree View')"
          >Tree View</button>
+    
+        <button
+          data-tab-item="Testing Tree View"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','Testing Tree View')"
+         >Testing Tree View</button>
     
     </div>
     <div class="tab-content">
@@ -1088,16 +1100,30 @@
         </div>
         
         <div data-tab-item="Tree View" data-tab-group="default" class="tab-item ">
-            <p>sljdlkjsdlkj</p>
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
 </head>
 <body>
-<h1>Heading</h1>
-<p>This is a paragraph.</p>
-<iframe src="AGREEMENT_ACTION_COMPLETED.json" height="200" width="300" title="Iframe Example"></iframe> 
+<div id="json-tree-view">
+</div>
+</body>
+</html>   
+
+        </div>
+        
+        <div data-tab-item="Testing Tree View" data-tab-group="default" class="tab-item ">
+            <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <json-viewer id="json">
+        { "quiz": { "sport": { "q1": { "question": "Which one is correct team name in NBA?", "options": [ "New York Bulls",
+        "Los Angeles Kings", "Golden State Warriros", "Huston Rocket" ], "answer": "Huston Rocket" } }, "maths": { "q1": {
+        "question": "5 + 7 = ?", "options": [ "10", "11", "12", "13" ], "answer": "12" }, "q2": { "question": "12 - 8 = ?",
+        "options": [ "1", "2", "3", "4" ], "answer": "4" } } } }
+    </json-viewer>
 </body>
 </html>   
 
@@ -1114,7 +1140,7 @@
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
-<div class="right right-column-content">
+<div id="right-column-content" class="right right-column-content">
     
 
 
@@ -1211,7 +1237,7 @@
 <p>Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
 <p>Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.</p>
-<div class="right right-column-content">
+<div id="right-column-content" class="right right-column-content">
     
 
 
@@ -1318,7 +1344,7 @@
 
 <footer class="footline"> 
 <hr class="footerhr"/>
-    Copyright ABC. <span class="date-info italic"> Last modified: Thu Dec 1, 2022</span>
+    Copyright ABC. <span class="date-info italic"> Last modified: Wed Dec 7, 2022</span>
 
     
 </footer>
@@ -1574,19 +1600,19 @@
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="/js/clipboard.min.js?1670359118"></script>
-<script src="/js/perfect-scrollbar.min.js?1670359118"></script>
-<script src="/js/perfect-scrollbar.jquery.min.js?1670359118"></script>
-<script src="/js/jquery.sticky.js?1670359118"></script>
-<script src="/js/featherlight.min.js?1670359118"></script>
-<script src="/js/highlight.pack.js?1670359118"></script>
+<script src="/js/clipboard.min.js?1670479079"></script>
+<script src="/js/perfect-scrollbar.min.js?1670479079"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js?1670479079"></script>
+<script src="/js/jquery.sticky.js?1670479079"></script>
+<script src="/js/featherlight.min.js?1670479079"></script>
+<script src="/js/highlight.pack.js?1670479079"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/js/modernizr.custom-3.6.0.js?1670359118"></script>
-<script src="/js/learn.js?1670359118"></script>
-<script src="/js/hugo-learn.js?1670359118"></script>
+<script src="/js/modernizr.custom-3.6.0.js?1670479079"></script>
+<script src="/js/learn.js?1670479079"></script>
+<script src="/js/hugo-learn.js?1670479079"></script>
 
 
-<script src="/mermaid/mermaid.js?1670359118"></script>
+<script src="/mermaid/mermaid.js?1670479079"></script>
 
 <script>
 mermaid.initialize({ startOnLoad: true });
@@ -1689,7 +1715,33 @@ function getElementTopPosition(element) {
 }
 </script>
 
+<script>
+    
+    var wrapper = document.getElementById('json-tree-view');
+    
+    var data = {
+        "firstName": "Jonh",
+        "lastName": "Smith",
+        "phones": [
+            "123-45-67",
+            "987-65-43"
+        ]
+    };
 
+    
+    var dataStr = '{ "firstName": "Jonh", "lastName": "Smith", "phones": ["123-45-67", "987-65-43"]}';
+    try {
+        var data = JSON.parse(dataStr);
+    } catch (e) {}
+
+    
+    var tree = jsonTree.create(data, wrapper);
+
+    
+    tree.expand(function(node) {
+    return node.childNodes.length < 2 || node.label === 'phoneNumbers';
+    });
+</script>
 </body>
 </html>
 

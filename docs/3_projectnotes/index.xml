@@ -13,7 +13,7 @@
       
       <guid>https://calebybee.github.io/3_projectnotes/tabs/</guid>
       <description>References https://learn.netlify.app/en/shortcodes/tabs/ Additional features: https://github.com/rvanhorn/hugo-dynamic-tabs All work and no play makes jack a dull boy.
-Tabs python javascript java const animals = [&amp;#39;pigs&amp;#39;, &amp;#39;goats&amp;#39;, &amp;#39;sheep&amp;#39;]; const count = animals.push(&amp;#39;cows&amp;#39;); console.log(count); // expected output: 4 console.log(animals); // expected output: Array [&amp;#34;pigs&amp;#34;, &amp;#34;goats&amp;#34;, &amp;#34;sheep&amp;#34;, &amp;#34;cows&amp;#34;] animals.push(&amp;#39;chickens&amp;#39;, &amp;#39;cats&amp;#39;, &amp;#39;dogs&amp;#39;); console.log(animals); // expected output: Array [&amp;#34;pigs&amp;#34;, &amp;#34;goats&amp;#34;, &amp;#34;sheep&amp;#34;, &amp;#34;cows&amp;#34;, &amp;#34;chickens&amp;#34;, &amp;#34;cats&amp;#34;, &amp;#34;dogs&amp;#34;] var DOCUMENTATION_OPTIONS = { URL_ROOT: document.getElementById(&amp;#34;documentation_options&amp;#34;).getAttribute(&amp;#39;data-url_root&amp;#39;), VERSION: &amp;#39;&amp;#39;, LANGUAGE: &amp;#39;None&amp;#39;, COLLAPSE_INDEX: false, BUILDER: &amp;#39;html&amp;#39;, FILE_SUFFIX: &amp;#39;.</description>
+Tabs pythonjavascriptjavaconst animals = [&amp;#39;pigs&amp;#39;, &amp;#39;goats&amp;#39;, &amp;#39;sheep&amp;#39;]; const count = animals.push(&amp;#39;cows&amp;#39;); console.log(count); // expected output: 4 console.log(animals); // expected output: Array [&amp;#34;pigs&amp;#34;, &amp;#34;goats&amp;#34;, &amp;#34;sheep&amp;#34;, &amp;#34;cows&amp;#34;] animals.push(&amp;#39;chickens&amp;#39;, &amp;#39;cats&amp;#39;, &amp;#39;dogs&amp;#39;); console.log(animals); // expected output: Array [&amp;#34;pigs&amp;#34;, &amp;#34;goats&amp;#34;, &amp;#34;sheep&amp;#34;, &amp;#34;cows&amp;#34;, &amp;#34;chickens&amp;#34;, &amp;#34;cats&amp;#34;, &amp;#34;dogs&amp;#34;] var DOCUMENTATION_OPTIONS = { URL_ROOT: document.getElementById(&amp;#34;documentation_options&amp;#34;).getAttribute(&amp;#39;data-url_root&amp;#39;), VERSION: &amp;#39;&amp;#39;, LANGUAGE: &amp;#39;None&amp;#39;, COLLAPSE_INDEX: false, BUILDER: &amp;#39;html&amp;#39;, FILE_SUFFIX: &amp;#39;.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ Tabs python javascript java const animals = [&amp;#39;pigs&amp;#39;, &amp;#39;go
       <description>Tabs doc: https://learn.netlify.app/en/shortcodes/tabs/
 This include file example, works, but it should appear in a third column if it is visible (after clicking the eye icon).
 BUG: We only have one right column, but here we call it 5 times. So we need to keep adding the tab collections to the one right column somehow.
-All work and no play makes jack a dull boy. Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick.</description>
+All work and no play makesjack a dull boy. Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick.</description>
     </item>
     
     <item>
@@ -56,7 +56,7 @@ Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutt
       <description>Insert Code Example 2 Tabs doc: https://learn.netlify.app/en/shortcodes/tabs/
 This include file example, works, but it should appear in a third column if it is visible (after clicking the eye icon).
 BUG: We only have one right column, but here we call it 5 times. So we need to keep adding the tab collections to the one right column somehow.
-All work and no play makes jack a dull boy. First set Use inner to place this in the 3rd column</description>
+All work and no play makesjack a dull boy. First set Use inner to place this in the 3rd column</description>
     </item>
     
     <item>

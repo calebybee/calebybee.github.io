@@ -30,6 +30,12 @@ Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutt
 {{% include "/../3_projectnotes/jsonfiles/htmlfile.html"   %}}
 
 {{% /tab %}}
+
+{{% tab name="Testing Tree View" %}}
+
+{{% include "/../3_projectnotes/jsonfiles/json_tree_2nd.html"   %}}
+
+{{% /tab %}}
 {{< /tabs >}}
 {{< /codeforrightcolumn >}}
 
